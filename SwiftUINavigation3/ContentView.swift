@@ -38,12 +38,12 @@ struct DetailView: View {
                 showModal = true
             }
             .buttonStyle(.borderedProminent)
-               }
+            .sheet(isPresented: $showModal) {
+                MoreInfoView(fruit: fruit)
+            }
+        }
         .padding()
         .navigationTitle(fruit.name)
-        .sheet(isPresented: $showModal) {
-            MoreInfoView(fruit: fruit)
-        }
     }
 }
 
