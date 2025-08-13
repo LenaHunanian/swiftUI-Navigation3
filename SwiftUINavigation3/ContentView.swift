@@ -25,11 +25,7 @@ struct ContentView: View {
 struct DetailView: View {
     let fruit: Fruit
     @State var showModal: Bool = false
-    
-    init(fruit: Fruit) {
-        self.fruit = fruit
-    }
-    
+   
     var body: some View {
         VStack {
             Text(fruit.name)
